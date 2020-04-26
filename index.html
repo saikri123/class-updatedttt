@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="board" id="board">
+        <div class="cell "></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+
+    <div class="win" id="win">
+        <div class="winning-condition">
+            <span class="cond" id="cond"></span><br>
+            <button class="btn" id="btn" >Restart</button>
+        </div>
+    </div>    
+
+    <script src="player.js"></script>
+    <script src="cell.js"></script>
+    <script src="board.js"></script>
+    <script src="gamecontroller.js"></script>
+
+    <script>
+        let player1=new Player('x','player1');
+        let player2=new Player('circle','player2');
+        let board=new Board('xhover');
+        let cell=new Cell('x');
+        let gamecontroller=new GameController(player1,player2,board,cell);
+        gamecontroller.markplace();
+    </script>
+</body>
+</html>
